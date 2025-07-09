@@ -2,7 +2,7 @@ package com.abhi.beanexample;
 
 public class Payment {
 
-    private String providerName;
+    String providerName;
 
     public String getProviderName() {
         return providerName;
