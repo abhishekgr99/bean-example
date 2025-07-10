@@ -2,6 +2,7 @@ package com.abhi.beanexample;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class AppConfig {
@@ -24,6 +25,15 @@ public class AppConfig {
     Payment payment2(){
         Payment p = new Payment();
         p.setProviderName("GPay");
+        return p;
+    }
+
+    // @Primary annotation used as default bean when multiple bean's was initiated with same type(Payment) to avoid ambiguity exceptions
+    @Primary
+    @Bean
+    Payment payment3(){
+        Payment p = new Payment();
+        p.setProviderName("Rapipay");
         return p;
     }
 
