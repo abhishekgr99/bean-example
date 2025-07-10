@@ -24,6 +24,9 @@ public class BeanExampleApplication {
 		Payment payment2 = context.getBean("payment2", Payment.class);
 		System.out.println(payment2.getProviderName());
 
+		Payment payment3 = context.getBean(Payment.class);
+		System.out.println(payment3.getProviderName());
+
 		String name = context.getBean(String.class);
 		System.out.println(name);
 	}
